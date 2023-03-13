@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main() 
+{
+
+  double weight;
+  int x;
+
+  printf("enter your current weight on earth=  ");
+  scanf("%lf", &weight);
+
+  printf("I have the information for the following plannet: \n");
+  printf(" 1)Mercury \n 2)Venus \n 3)Mars   \n 4)Jupiter \n 5)Saturn \n 6)Uranus \n 7)Neptune ");
+
+  printf("\nwhich plannet you are visiting?\n");
+  scanf("%d", &x);
+
+  if (x == 1){
+    weight = weight * 0.38;
+  } else if (x == 2){
+    weight = weight * 0.91;
+  } else if (x == 3){
+    weight = weight *0.38;
+  } else if (x == 4){
+    weight = weight *2.34;
+  } else if (x == 5){
+    weight = weight * 1.06;
+  } else if (x == 6){
+    weight = weight * 0.92;
+  } else if (x == 7){
+    weight = weight * 1.19;
+  }
+  printf("\n your weight: %lf\n", weight);
+
+  return 0;
+}
