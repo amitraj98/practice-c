@@ -1,0 +1,52 @@
+// 16. Write a C program to read an amount (integer value) and break the amount into the smallest possible number of bank notes.
+// Test Data :
+// Input the amount: 375
+// Expected Output:
+// There are:
+// 3 Note(s) of 100.00
+// 1 Note(s) of 50.00
+// 1 Note(s) of 20.00
+// 0 Note(s) of 10.00
+// 1 Note(s) of 5.00
+// 0 Note(s) of 2.00
+// 0 Note(s) of 1.00
+
+#include <stdio.h>
+
+int main() {
+    
+    int amt;
+    int notes;
+    int total;
+    
+    printf("input the amount = ");
+    scanf("%d", &amt);
+    total = (int)amt/100; // 375/100= 3
+    printf("There are: ");
+    printf("\n%d Note(s) of 100.00\n", total); //3
+    
+    amt = amt-(total*100); //375-300=75
+    total = (int)amt/50; // 75/50=1
+    printf("%d Note(s) of 50.00\n", total); //1
+    
+    amt = amt-(total*50); //75-50=25
+    total = (int)amt/20; //25/20=1
+    printf("%d Note(s) of 20.00\n", total); //1
+    
+    amt = amt-(total*20); //25-20=5
+    total = (int)amt/10; //5/20=0
+    printf("%d Note(s) of 10.00\n", total); //0
+    
+    amt = amt-(total*10); //5-0=5
+    total = (int)amt/5; //5/5=1
+    printf("%d Note(s) of 5.00\n", total); //1
+    
+    amt = amt-(total*5); //5-5=0
+    total = (int)amt/2; //0/2=0
+    printf("%d Note(s) of 2.00\n", total); //0
+    
+    amt = amt-(total*2); //0-0=0
+    total = (int)amt/1; //0
+    printf("%d Note(s) of 1.00\n", total); //0
+    return 0;
+}
