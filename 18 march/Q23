@@ -1,0 +1,34 @@
+// 23. Write a C program that reads three floating-point values and checks if it is possible to make a triangle with them. Determine the perimeter of the triangle if the given values are valid.  
+// Test Data :
+// Input the first number: 25
+// Input the second number: 15
+// Input the third number: 35
+// Expected Output:
+// Perimeter = 75.0
+
+#include <stdio.h>
+
+int main() {
+    
+    float n1,n2,n3;
+    float perimeter;
+    
+    printf("Input the first number: ");
+    scanf("%f", &n1);
+    printf("Input the second number: ");
+    scanf("%f", &n2);
+    printf("Input the third number: ");
+    scanf("%f", &n3);
+    
+    if(n1+n2>n3 && n2+n3>n1 && n1+n3>n2){
+        printf("it is possible to make a triangle with them.");
+    
+    perimeter = n1+n2+n3 ;
+        printf("\nperimeter of the triangle %0.2f", perimeter);
+        
+    }else{
+        printf("not possible to make triangle");
+    }
+    
+    return 0;
+}
