@@ -1,0 +1,46 @@
+// 27. Write a C program that reads 5 numbers and counts the number of positive numbers and negative numbers.  
+// Test Data :
+// Input the first number: 5
+// Input the second number: -4
+// Input the third number: 10
+// Input the fourth number: 15
+// Input the fifth number: -1
+// Expected Output:
+// Number of positive numbers: 3
+// Number of negative numbers: 2
+
+#include <stdio.h>
+
+int main() {
+    
+    float numbers[5];
+    int i;
+    int positve_no=0;
+    int negative_no=0;
+    
+    printf("\nInput the first number: "); 
+    scanf("%f", &numbers[0]);
+    printf("\nInput the second number: "); 
+    scanf("%f", &numbers[1]);
+    printf("\nInput the third number: "); 
+    scanf("%f", &numbers[2]);
+    printf("\nInput the fourth number: "); 
+    scanf("%f", &numbers[3]);
+    printf("\nInput the fifth number: "); 
+    scanf("%f", &numbers[4]);
+    
+    for(i = 0; i < 5; i++) {
+        if(numbers[i] > 0)
+        {
+            positve_no++;
+        }
+        else if(numbers[i] < 0)
+        {
+            negative_no++;
+        }
+    }
+    printf("\nNumber of positive numbers: %d", positve_no);
+    printf("\nNumber of negative numbers: %d", negative_no);
+
+    return 0;
+}

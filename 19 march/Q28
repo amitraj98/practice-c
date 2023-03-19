@@ -1,0 +1,44 @@
+// 28. Write a C program that reads 5 numbers, counts the number of positive numbers, and prints out the average of all positive values.  
+// Test Data :
+// Input the first number: 5
+// Input the second number: 8
+// Input the third number: 10
+// Input the fourth number: -5
+// Input the fifth number: 25
+// Expected Output:
+// Number of positive numbers: 4
+// Average value of the said positive numbers: 12.00
+
+#include <stdio.h>
+
+int main() {
+    float numbers[5];
+    int i;
+    int positve_no=0;
+    float average;
+    float total=0;
+    
+    printf("\nInput the first number: "); 
+    scanf("%f", &numbers[0]);
+    printf("\nInput the second number: "); 
+    scanf("%f", &numbers[1]);
+    printf("\nInput the third number: "); 
+    scanf("%f", &numbers[2]);
+    printf("\nInput the fourth number: "); 
+    scanf("%f", &numbers[3]);
+    printf("\nInput the fifth number: "); 
+    scanf("%f", &numbers[4]);
+    
+    for(i = 0; i < 5; i++) {
+        if(numbers[i] > 0)
+        {
+            positve_no++;
+            total = total+numbers[i];
+        }
+    }
+    printf("\n\nNumber of positive numbers: %d", positve_no);
+    
+    average = total/positve_no;
+    printf("\nAverage value of the said positive numbers: %0.2f", average);
+    return 0;
+}
