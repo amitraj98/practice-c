@@ -1,0 +1,38 @@
+// 33. Write a C program that accepts some integers from the user and finds the highest value and the input position.  
+// Test Data :
+// Input 5 integers:
+// 5
+// 7
+// 15
+// 23
+// 45
+// Expected Output:
+// Highest value: 45
+// Position: 5
+
+#include <stdio.h>
+int main(){
+    
+    int i, n[5];
+    int highest = 0;
+    int position = 0;
+    
+    printf("Input 5 integers\n");
+    
+    for (i=1; i<=5; i++)
+    {
+        printf("element %d = ",i);
+        scanf("%d", &n[i]);
+        
+        if(n[i]>highest)
+        {
+            highest=n[i];
+            position = i;
+        }
+    }
+    
+    printf("Highest value: %d\n", highest);
+    printf("Position: %d\n", position);
+    
+    return 0;
+}
