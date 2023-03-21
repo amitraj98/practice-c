@@ -1,0 +1,41 @@
+// 40. Write a C program that finds all integer numbers that divide by 7 and have a remainder of 2 or 3 between two given integers. 
+// Test Data :
+// Input the first integer: 25
+// Input the second integer: 45
+// Expected Output:
+// 30
+// 31
+// 37
+// 38
+// 44
+
+#include <stdio.h>
+int main(){
+    
+    int x,y;
+    int temp;
+    int i;
+    
+    
+    printf("enter first number = ");
+    scanf("%d", &x);
+    printf("enter second number = ");
+    scanf("%d", &y);
+    
+    printf("expected output = ");
+    
+    if(x>y)
+    {
+        temp=y;
+        y=x;
+        x=temp;
+    }
+    
+    for(i=x+1; i<y; i++){
+        if((i % 7)==2 || (i % 7)==3){
+            printf(" %d\t", i);
+        }
+    }
+    
+    return 0;
+}

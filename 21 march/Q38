@@ -1,0 +1,32 @@
+// 38. Write a program that reads two numbers and divides the first number by the second number. If division is not possible print "Division is not possible". 
+// Test Data :
+// Input two numbers:
+// x: 25
+// y: 5
+// Expected Output: 5.0
+
+
+#include <stdio.h>
+int main()
+  {
+    int x, y;
+    float division;
+    
+    
+    printf("input the first number = ");
+    scanf("%d", &x);
+    printf("input the second number = ");
+    scanf("%d", &y);
+    
+    if(x>y){
+        
+        division=x/y;
+        printf("expected output = %0.2f", division);
+        
+    }else{
+        printf("division is not possible");
+    }
+
+
+    return 0;
+}
