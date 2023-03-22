@@ -1,0 +1,19 @@
+// 41) Write a C program to print 3 numbers on a line, starting with 1 and printing n lines. Accept the number of lines (n, integer) from the user.
+#include <stdio.h>
+
+int main() {
+    int n, i, j, num = 1;
+
+    printf("Enter the number of lines: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) { //after one complition of round we come out of the loop and increase the value of i by i++ so i=1 now.
+        for (j = 0; j < 3; j++) { // j=1,2,3  1,2,3
+            printf("%d ", num); //num= 1,2,3   4,5,6
+            num++; //num++ =2,3,4  5,6,7
+        }
+      printf("\n");
+    }
+
+    return 0;
+}
