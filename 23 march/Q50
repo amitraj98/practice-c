@@ -1,0 +1,29 @@
+// 50. Write a C program to read an array of length 5 and print the position and value of the array elements of value less than 5 
+// Test Data:
+// Input the 5 members of the array:
+// 15
+// 25
+// 4
+// 35
+// 40
+// Expected Output:
+// A[2] = 4.0
+
+#include <stdio.h>
+#define AL 5
+#define MAX 5
+
+int main() {
+    float N[AL];
+    int i;
+    printf("Input the 5 members of the array:\n");
+    for(i = 0; i < AL; i++) {
+        scanf("%f", &N[i]);
+    }
+    for(i = 0; i < AL; i++) {
+        if(N[i] < MAX) {
+            printf("A[%d] = %.1f\n", i, N[i]);
+        }
+    }
+    return 0;
+}
