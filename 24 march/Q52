@@ -1,0 +1,41 @@
+// 52} Write a C program to read an array of length 6 and find the smallest element and its position.  
+// Test Data:
+// Input the length of the array: 5 Input the array elements:
+// 25
+// 35
+// 20
+// 14
+// 45
+// Expected Output:
+// Smallest Value: 14
+// Position of the element: 3
+#include <stdio.h>
+
+int main() {
+    int arr[6];
+    int i, small = 0, pos = 0;
+
+    // Input the array elements
+    printf("Input the array elements:\n");
+    for (i = 0; i < 6; i++) 
+    {   printf("element %d = ",i);
+        scanf("%d", &arr[i]);
+    }
+
+    // Find the smallest element and its position
+    small = arr[0];
+    for (i = 1; i < 6; i++) 
+    {
+        if (arr[i] < small) 
+        {
+            small = arr[i];
+            pos = i;
+        }
+    }
+
+    // Output the result
+    printf("Smallest Value: %d\n", small);
+    printf("Position of the element: %d \n", pos+1);
+
+    return 0;
+}

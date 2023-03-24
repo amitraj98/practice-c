@@ -1,0 +1,21 @@
+// 54. Write a C program that accepts a distance in centimeters and prints the corresponding value in inches.  
+// Test Data:
+// Input Data: 500cms
+// Input the distance in cm:
+// Distance of 500.00 cms is = 196.85 inches
+
+#include <stdio.h>
+int main()
+{
+    double cm, inch;
+    
+    printf("accepts a distance in centimeters and prints the corresponding value in inches.\n");
+    
+    printf("distance in centimeters = ");
+    scanf("%lf",&cm);
+    
+    inch = cm/2.54;
+    printf("value in inches = %0.2lf",inch);
+    
+    return 0;
+}

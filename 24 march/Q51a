@@ -1,0 +1,54 @@
+// 51. Write a C program to read an array of length 6, change the first element by the last, the second element by the fifth and the third element by the fourth. Print the elements of the modified array. 
+// Test Data:
+// Input the 5 members of the array:
+// 15
+// 20
+// 25
+// 30
+// 35
+
+// Expected Output:
+// array_n[0] = 35
+// array_n[1] = 30
+// array_n[2] = 25
+// array_n[3] = 20
+// array_n[4] = 15
+
+#include <stdio.h>
+
+int main() 
+{
+   int array[6];
+   int i, temp;
+   
+   printf("Input the 6 members of the array: \n");
+   
+   for (i = 0; i < 6; i++) 
+   {
+      printf("element %d: ",i);
+      scanf("%d", &array[i]);
+   }
+
+   // swapping the elements
+   temp = array[0];
+   array[0] = array[5];
+   array[5] = temp;
+
+   temp = array[1];
+   array[1] = array[4];
+   array[4] = temp;
+
+   temp = array[2];
+   array[2] = array[3];
+   array[3] = temp;
+
+   printf("\nModified Array: \n");
+   
+   // printing the modified array
+   for (i = 0; i < 6; i++) 
+   {
+      printf("array[%d] = %d\n", i, array[i]);
+   }
+
+   return 0;
+}
