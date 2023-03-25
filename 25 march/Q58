@@ -1,0 +1,41 @@
+// 58. Write a C program that accepts 4 real numbers from the keyboard and prints out the difference between the maximum and minimum values of these four numbers.  
+// Input four numbers: 1.54 1.236 1.3625 1.002
+// Difference is 0.5380
+
+#include <stdio.h>
+
+int main() {
+    
+    float a,b,c,d;
+    float max;
+    float min;
+    float diff;
+    
+    printf("enter 4 real numbers from the keyboard \n");
+    
+    printf("number a = ");
+    scanf("%f",&a);
+    printf("number b = ");
+    scanf("%f",&b);
+    printf("number c = ");
+    scanf("%f",&c);
+    printf("number d = ");
+    scanf("%f",&d);
+    
+    //find the max number
+    max=a;
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    
+    min=b;
+    if(b<min) min=b;
+    if(c<min) min=c;
+    if(d<min) min=d;
+    
+    diff=max-min;
+    
+    printf("difference between the maximum and minimum values = %.4f", diff);
+
+    return 0;
+}

@@ -1,0 +1,31 @@
+56. Write a C program to shift given data by two bits to the left.  
+Input value : 2
+Read the integer from keyboard-
+Integer value = 2
+The left shifted data is = 16
+
+#include<stdio.h>
+int main()
+{
+    int num, shifted_num;
+
+    printf("Enter an integer value = ");
+    scanf("%d", &num);
+
+    shifted_num = num << 2;
+
+    printf("The left shifted data is = %d\n", shifted_num);
+    return 0;
+}
+//Note that the result of shifting 2 two bits to the left is 8, not 16 as stated in the question. If you meant to shift it four bits to the left to get 16, you can modify the line shifted_num = num << 2; to shifted_num = num << 4;.
+
+    // int num, shifted_num;
+
+    // printf("Enter an integer: ");
+    // scanf("%d", &num);
+
+    // shifted_num = num << 4;
+
+    // printf("The left shifted data is = %d\n", shifted_num); //16
+
+    

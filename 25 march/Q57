@@ -1,0 +1,22 @@
+// 57. Write a C program to reverse and print a given number.  
+// Input a number:
+// The original number = 234
+// The reverse of the said number = 432
+
+
+#include<stdio.h>
+int main()
+{
+    int number,n,sum=0;
+    printf("Input a number: ");
+    scanf("%d",&number);
+    printf("\nThe original number = %d",number);
+    while(number>=1)
+    {
+        n=number%10; //1234%10= 4,3,2,1
+        sum=sum*10+n; //0+4= 4, 40+3, 430+2, 4320+1
+        number=number/10; //1234/10= 123, 12, 1, 0
+    }
+    printf("\nThe reverse of the said number = %d",sum);
+    return 0;
+}

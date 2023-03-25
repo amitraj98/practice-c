@@ -1,0 +1,31 @@
+// 60. Write a C program to create enumerated data types for 7 days 
+// and display their values in integer constants.  
+// Sun = 0
+// Mon = 1
+// Tue = 2
+// Wed = 3
+// Thu = 4
+// Fri = 5
+// Sat = 6
+
+#include <stdio.h>
+
+enum Days { Sun = 0, Mon = 1, Tue = 2, Wed = 3, Thu = 4, Fri = 5, Sat = 6 };
+
+int main() 
+{
+    printf("Sun = %d\n", Sun);
+    printf("Mon = %d\n", Mon);
+    printf("Tue = %d\n", Tue);
+    printf("Wed = %d\n", Wed);
+    printf("Thu = %d\n", Thu);
+    printf("Fri = %d\n", Fri);
+    printf("Sat = %d\n", Sat);
+    
+    return 0;
+}
+
+// In this program, we define an enumerated data type called Days that
+// includes 7 elements: Sun, Mon, Tue, Wed, Thu, Fri, and Sat. 
+// We assign integer values to each element using the equals sign, 
+// starting with 0 for Sun and incrementing by one for each subsequent day.
