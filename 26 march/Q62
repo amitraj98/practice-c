@@ -1,0 +1,28 @@
+// 62. Write a C program that accepts a positive integer less than 500 and prints out the sum of the digits of this number.  
+// Input a positive number less than 500:
+// Sum of the digits of 347 is 14
+
+#include <stdio.h>
+
+int main() {
+    int num, n, sum = 0;
+    printf("Input a positive number less than 500: ");
+    scanf("%d", &num);
+    
+    n = num;
+    // check if num is positive and less than 500
+    if (num < 1 || num >= 500) {
+        printf("Invalid input\n");
+        return 1;
+    }
+
+    // calculate the sum of the digits
+    while (num != 0) {
+        sum = sum + num % 10;
+        num = num/10;
+    }
+
+    printf("Sum of the digits of %d is %d\n", n, sum);
+
+    return 0;
+}
