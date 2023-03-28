@@ -1,0 +1,38 @@
+// 72.A Write a C program to remove any negative sign in front of a number.  
+// Input a value (negative):
+// Original value = -253
+// Absolute value = 253
+
+#include<stdio.h>
+
+int main() {
+    int num, abs_num;
+    
+    printf("Enter a value (negative): ");
+    scanf("%d", &num);
+    
+    // Removing the negative sign
+    abs_num = num < 0 ? -num : num;
+    
+    printf("Original value = %d\n", num);
+    printf("Absolute value = %d", abs_num);
+    
+    return 0;
+}
+
+// #include<stdio.h>
+// #include<stdlib.h>
+
+// int main() {
+//     int value, absolute_value;
+    
+//     printf("Enter a value (negative): ");
+//     scanf("%d", &value);
+    
+//     absolute_value = abs(value);
+    
+//     printf("Original value = %d\n", value);
+//     printf("Absolute value = %d\n", absolute_value);
+    
+//     return 0;
+// }

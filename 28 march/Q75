@@ -1,0 +1,25 @@
+// 75. Write a C program that accepts a seven-digit number, separates the number into its individual digits, and prints the digits separated from one another by two spaces each. Go to the editor
+// Sample Input: 2345678
+// Input a seven digit number:
+// Output: 2 3 4 5 6 7 8
+
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Input a seven digit number: ");
+    scanf("%d", &num);
+    
+    printf("Output: ");
+    
+    // Extract digits from the number and print them with two spaces in between
+    printf("%d  ", num/1000000);
+    printf("%d  ", num/100000%10);
+    printf("%d  ", num/10000%10);
+    printf("%d  ", num/1000%10);
+    printf("%d  ", num/100%10);
+    printf("%d  ", num/10%10);
+    printf("%d", num%10);
+    
+    return 0;
+}
