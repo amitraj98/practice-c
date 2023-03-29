@@ -1,0 +1,27 @@
+// 78. Write a C program to demonstrate the difference between predecrementing and postdecrementing using the decrement operator --. Go to the editor
+// Sample Output:
+// Predecrementing:
+// x = 10
+// x-- = 10
+// x = 9
+
+#include<stdio.h>
+int main()
+{
+    
+   int x = 10;
+
+    printf("Predecrementing:\n");
+    printf("x = %d\n", x);
+    printf("--x = %d\n", --x);
+    printf("x = %d\n", x);
+
+    x = 10;
+
+    printf("\nPostdecrementing:\n");
+    printf("x = %d\n", x);
+    printf("x-- = %d\n", x--);
+    printf("x = %d\n", x);
+
+    return 0;
+}

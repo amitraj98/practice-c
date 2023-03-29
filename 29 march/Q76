@@ -1,0 +1,33 @@
+// 76. Write a C program to calculate and print the squares and cubes of the numbers from 0 to 20. 
+// It uses tabs to display them in a table of values.
+// Go to the editor
+// Sample Output:
+// Number Square Cube
+// =========================
+// 0 0 0
+// 1 1 1
+// 2 4 8
+// 3 9 27
+// .....
+// 18 324 5832
+// 19 361 6859
+// 20 400 8000
+// Click me to see the solution
+
+#include <stdio.h>
+int main(){
+    
+    int n,i;
+    
+    printf("calculate and print the squares and cubes of the numbers\n");
+    printf("Number\tSquare\tCube\n");
+    printf("=========================\n");
+    
+    for(i=0; i<=20; i++){
+        printf("  %2d    %5d    %5d\n", n, n*n, n*n*n);
+         n++;
+    }
+   
+    
+    return 0;
+}
