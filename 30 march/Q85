@@ -1,0 +1,123 @@
+// 85. Write a C program to print a table of all the Roman numeral equivalents of decimal numbers in the range 1 to 50.  
+// Sample Output:
+// Decimal  Roman
+// number   numeral
+// -------------------
+// 1        I
+// 2        II
+// 3        III
+// 4        IV
+// .....
+// 98        LXXXXVIII
+// 99        LXXXXIX
+// 100        C
+
+// #include <stdio.h>
+
+// int main() {
+//   int i, j, num;
+//   char roman[10];
+
+//   printf("Decimal  Roman\n");
+//   printf("number   numeral\n");
+//   printf("-------------------\n");
+   
+//   for(i=1; i<=50; i++) {
+//       num = i;
+//       j = 0;
+      
+//       while(num > 0) {
+//          if(num >= 10) {
+//             roman[j++] = 'X';
+//             num -= 10;
+//          }
+//          else if(num >= 9) {
+//             roman[j++] = 'I';
+//             roman[j++] = 'X';
+//             num -= 9;
+//          }
+//          else if(num >= 5) {
+//             roman[j++] = 'V';
+//             num -= 5;
+//          }
+//          else if(num >= 4) {
+//             roman[j++] = 'I';
+//             roman[j++] = 'V';
+//             num -= 4;
+//          }
+//          else {
+//             roman[j++] = 'I';
+//             num -= 1;
+//          }
+//       }
+      
+//       roman[j] = '\0';
+//       printf("%-8d %s\n", i, roman);
+//   }
+   
+//   return 0;
+// }
+
+#include <stdio.h>
+
+int main() {
+   int i, j, num;
+   char roman[10];
+
+   printf("Decimal  Roman\n");
+   printf("Number   numeral\n");
+   printf("-------------------\n");
+   
+   for(i=1; i<=100; i++) {
+      num = i;
+      j = 0;
+      
+      while(num > 0) {
+         if(num >= 100) {
+            roman[j++] = 'C';
+            num = num - 100;
+         }
+         else if(num >= 90) {
+            roman[j++] = 'X';
+            roman[j++] = 'C';
+            num = num - 90;
+         }
+         else if(num >= 50) {
+            roman[j++] = 'L';
+            num = num - 50;
+         }
+         else if(num >= 40) {
+            roman[j++] = 'X';
+            roman[j++] = 'L';
+            num = num - 40;
+         }
+         else if(num >= 10) {
+            roman[j++] = 'X';
+            num = num - 10;
+         }
+         else if(num >= 9) {
+            roman[j++] = 'I';
+            roman[j++] = 'X';
+            num = num - 9;
+         }
+         else if(num >= 5) {
+            roman[j++] = 'V';
+            num = num - 5;
+         }
+         else if(num >= 4) {
+            roman[j++] = 'I';
+            roman[j++] = 'V';
+            num = num - 4;
+         }
+         else {
+            roman[j++] = 'I';
+            num = num - 1;
+         }
+      }
+      
+      roman[j] = '\0';
+      printf("%-8d %s\n", i, roman);
+   }
+   
+   return 0;
+}

@@ -1,0 +1,31 @@
+// 82. Write a C program that reads a five-digit integer and determines whether or not it's a palindrome.  
+// Sample Input: 33333
+// Sample Output:
+// Input a five-digit number: 33333 is a palindrome.
+
+
+    #include <stdio.h>
+    int main() {
+    int num, rev = 0, rem, temp;
+    
+    printf("Input a five-digit number: ");
+    scanf("%d", &num);
+    
+    temp = num; //12321
+    
+    // Reversing the number
+    while(temp != 0) {  //12321 != 0;
+        rem = temp % 10; // 1,2,3,2,1
+        rev = rev * 10 + rem; // 0+1, 10+2, 120+3, 1230+2, 12320+1
+        temp = temp/10; //1232, 123, 12, 1,0
+    }
+    
+    // Checking if the number is a palindrome
+    if(num == rev) {
+        printf("%d is a palindrome.", num);
+    } else {
+        printf("%d is not a palindrome.", num);
+    }
+    
+    return 0;
+}
