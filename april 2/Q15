@@ -1,0 +1,20 @@
+// 15. Write a C program to calculate the factorial of a given number.
+// Test Data :
+// Input the number : 5
+// Expected Output :
+// The Factorial of 5 is: 120
+
+#include <stdio.h>
+int main()
+{
+    int num;
+    int i,factorial=1;
+    printf("calculate the factorial of a given number = ");
+    scanf("%d",&num);
+    
+    for(i=1; i<=num; i++)
+        factorial=factorial*i; //1*1;1*2;3*2;6*4;24*5;
+        
+    printf("factorial of %d is = %d ",num,factorial);
+    return 0;
+}
