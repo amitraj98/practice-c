@@ -1,0 +1,70 @@
+// 24. Write a program in C to find the sum of the series 
+// [ x - x^3 + x^5 + ......]. 
+// Test Data :
+// Input the value of x :2
+// Input number of terms : 5
+// Expected Output :
+// The values of the series:
+// 2
+// -8
+// 32
+// -128
+// 512
+// The sum = 410
+
+
+
+// #include <stdio.h>
+// #include <math.h>
+// void main()
+// {
+//  int x,sum,ctr;
+//  int i,n,m,mm,nn;
+  
+//  printf("program in C to find the sum of the series \n");
+//     printf("[ x - x^3 + x^5 + ......]. \n");
+//  printf("Input the value of x :");
+//  scanf("%d",&x);
+//  printf("Input number of terms : ");
+//  scanf("%d",&n);
+//  sum =x; m=-1;
+//  printf("The values of the series: \n");
+//  printf("%d\n",x);
+//     for (i = 1; i < n; i++) 
+//     {
+//         ctr = (2 * i + 1);
+//         mm = pow(x, ctr);
+//         nn = mm * m;
+//         printf("%d \n",nn);
+//         sum = sum + nn;
+//         m = m * (-1);
+//  }
+//  printf("\nThe sum = %d\n",sum);
+// }
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int x, n, i;
+    int term, sum = 0;
+
+    printf("Input the value of x: ");
+    scanf("%d", &x);
+
+    printf("Input number of terms: ");
+    scanf("%d", &n);
+
+    printf("The values of the series:\n");
+    for (i = 0; i < n; i++) {
+        term = pow(-1, i) * pow(x, 2*i + 1);
+        printf("%d\n", term);
+        sum += term;
+    }
+
+    printf("The sum = %d\n", sum);
+
+    return 0;
+}
