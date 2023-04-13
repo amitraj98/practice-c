@@ -1,0 +1,25 @@
+// 39. Write a program in C to find the number and sum of all integers between 100 and 200 which are divisible by 9. 
+// Expected Output :
+// Numbers between 100 and 200, divisible by 9 :
+// 108 117 126 135 144 153 162 171 180 189 198
+// The sum : 1683
+
+#include<stdio.h>
+int main(){
+    
+    int num, sum=0;
+    int i;
+    
+    printf("find the number and sum of all integers between 100 and 200 which are divisible by 9\n");
+    for(i=100; i<=200; i++){
+        if(i%9==0){
+            printf("%d ",i);
+            sum=sum+i;
+        }
+    }
+    printf("\nthe sum = %d",sum);
+    
+    
+    
+    return 0;
+}
