@@ -1,0 +1,39 @@
+// 52. Write a program in c to find the Sum of GP series. 
+// Test Data :
+// Input the first number of the G.P. series: 3
+// Input the number or terms in the G.P. series: 5
+// Input the common ratio of G.P. series: 2
+// Expected Output :
+// The numbers for the G.P. series:
+// 3.000000 6.000000 12.000000 24.000000 48.000000
+// The Sum of the G.P. series : 93.000000
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float first_num, common_ratio, term, sum = 0;
+    int num_terms, i;
+
+    printf("Input the first number of the G.P. series: ");
+    scanf("%f", &first_num); //5
+
+    printf("Input the number of terms in the G.P. series: ");
+    scanf("%d", &num_terms); //3
+
+    printf("Input the common ratio of the G.P. series: ");
+    scanf("%f", &common_ratio);  //2
+
+    printf("\nThe numbers for the G.P. series:\n");
+    for(i=0; i<num_terms; i++) {
+        term = first_num * pow(common_ratio,i); //5*
+        printf("%.6f ", term); //
+        sum = sum + term;
+    }
+
+    printf("\nThe Sum of the G.P. series: %.6f", sum);
+
+    return 0;
+}
+
+

@@ -1,0 +1,40 @@
+// 55. Write a program in C to convert a decimal number to hexadecimal.  
+// Test Data :
+// Input any Decimal number: 79
+// Expected Output :
+// The equivalent Hexadecimal Number : 4F
+
+#include <stdio.h>
+
+int main() {
+    int decimal_num, remainder;
+    char hex_num[20];
+    int i = 0, j;
+
+    printf("Input any Decimal number: ");
+    scanf("%d", &decimal_num);
+
+    // Convert decimal to hexadecimal
+    while (decimal_num != 0) {
+        remainder = decimal_num % 16;
+
+        if (remainder < 10) {
+            hex_num[i] = remainder + 48;
+        }
+        else {
+            hex_num[i] = remainder + 55;
+        }
+
+        ++i;
+        decimal_num /= 16;
+    }
+
+    printf("The equivalent Hexadecimal Number: ");
+
+    // Print the hexadecimal number in reverse order
+    for (j = i - 1; j >= 0; j--) {
+        printf("%c", hex_num[j]);
+    }
+
+    return 0;
+}
