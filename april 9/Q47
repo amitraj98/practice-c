@@ -1,0 +1,74 @@
+47. Write a C program to check whether a number is a Strong Number or not.  Test Data :
+Input a number to check whether it is Strong number: 15
+Expected Output :
+15 is not a Strong number.
+/* If sum of factorial of digits is equal to original number then it is Strong number */
+  
+
+// #include <stdio.h>
+// void main()  
+// {  
+//     int i, n, n1, s1=0,j;  
+//     long fact; 
+
+//     printf("Check whether a number is Strong Number or not:\n");
+//     printf("Input a number to check whether it is Strong number: ");  
+//     scanf("%d", &n);  //145
+//     n1 = n;  //145
+ 
+//     for(j=n; j>0; j=j/10) //145,14,
+//     {  
+//         fact = 1;  
+//         for(i=1; i <= (j%10); i++) //1<=5,2<=5,3<=5,4<=5,5<=5
+//                                    //1<=4,2<=4,3<=4,4<=4
+                                      //1<=1
+//         {  
+//             fact = fact * i;  //1,2,6,24,120
+//                               //1,2,6,24
+                                 //1     
+//         }  
+//          s1 = s1 + fact;  //0+120;120+24;144+1
+//     }  
+  
+//     if(s1==n1)  
+//     {  
+//         printf("\n%d is Strong number.\n\n", n1);  
+//     }  
+//     else  
+//     {  
+//         printf("\n%d is not Strong number.\n\n", n1);  
+//     }  
+// }
+
+
+
+#include <stdio.h>
+
+int main() {
+    int num, original_num, remainder, sum = 0, i, fact;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);         //145
+
+    original_num = num;        //145
+
+    while(num > 0) {
+        remainder = num % 10;   //5,4,1
+
+        fact = 1;
+        for(i = 1; i <= remainder; i++) {
+            fact = fact*i; //1,2,6,24,120; 1,2,6,24; 1
+        }
+
+        sum = sum + fact; //0+120; 120+24; 144+1=145
+        num = num/10;     //14; 1; 0
+    }
+
+    if(sum == original_num) {
+        printf("%d is a Strong Number.", original_num);
+    } else {
+        printf("%d is not a Strong Number.", original_num);
+    }
+
+    return 0;
+}

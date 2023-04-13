@@ -1,0 +1,39 @@
+// 49. Write a c program to find out the sum of an A.P. series.  
+// Test Data :
+// Input the starting number of the A.P. series: 1
+// Input the number of items for the A.P. series: 10
+// Input the common difference of A.P. series: 4
+// Expected Output :
+// The Sum of the A.P. series are :
+// 1 + 5 + 9 + 13 + 17 + 21 + 25 + 29 + 33 + 37 = 190
+
+#include <stdio.h>
+
+int main() {
+    int start, num_items, common_diff, i, sum = 0;
+
+    printf("Enter the starting number of the A.P. series: ");
+    scanf("%d", &start);
+
+    printf("Enter the number of items for the A.P. series: ");
+    scanf("%d", &num_items);
+
+    printf("Enter the common difference of the A.P. series: ");
+    scanf("%d", &common_diff);
+
+    printf("The sum of the A.P. series is: ");
+
+    for(i = 0; i < num_items; i++) {
+        printf("%d", start);
+        sum += start;
+        start += common_diff;
+
+        if(i != num_items - 1) {
+            printf(" + ");
+        }
+    }
+
+    printf(" = %d", sum);
+
+    return 0;
+}
