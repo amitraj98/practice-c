@@ -1,0 +1,33 @@
+// 45. Write a program in C to find LCM of any two numbers.  
+// Test Data :
+// Input 1st number for LCM: 15
+// Input 2nd number for LCM: 20
+// Expected Output :
+// The LCM of 15 and 20 is : 60
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, max;
+    printf("Input 1st number for LCM: ");
+    scanf("%d", &num1);
+    printf("Input 2nd number for LCM: ");
+    scanf("%d", &num2);
+
+    // Find the maximum of the two numbers
+    if (num1 > num2) {
+        max = num1;
+    } else {
+        max = num2;
+    }
+
+    // Find the LCM using the maximum
+    while (1) {
+        if (max % num1 == 0 && max % num2 == 0) {
+          printf("The LCM of %d and %d is : %d\n", num1, num2, max);
+            break;
+        }
+        ++max;
+    }
+    return 0;
+}
