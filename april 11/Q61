@@ -1,0 +1,55 @@
+// 61. Write a C program that takes input from the user and counts the number of uppercase and lowercase letters, as well as the number of other characters.  Test Data :
+// Input characters : w3resource
+// Expected Output :
+// Input characters: On Linux systems and OS X EOF is CTRL+D. For Windows EOF is CTRL+Z. Uppercase letters: 0 Lowercase letters: 9 Other characters: 1
+
+// #include <stdio.h>
+// #include <ctype.h>
+
+// int main(void)
+// {
+//  int chr;
+//  int uppercase_ctr = 0, lowercase_ctr = 0, other_ctr = 0;
+//     printf("\nInput characters: On Linux systems and OS X EOF is CTRL+D. For Windows EOF is CTRL+Z.\n");
+//  while ((chr = getchar()) != EOF)
+//  {
+//      if (isupper(chr))
+//          uppercase_ctr++;
+//      else if (islower(chr))
+//          lowercase_ctr++;
+//      else
+//          other_ctr++;
+//  }
+
+//  printf("\nUppercase letters: %d\n", uppercase_ctr);
+//  printf("Lowercase letters: %d\n", lowercase_ctr);
+//  printf("Other characters: %d\n", other_ctr);
+//  return 0;
+// }
+
+
+#include <stdio.h>
+
+int main() {
+    char c;
+    int uppercase = 0, lowercase = 0, other = 0;
+
+    printf("Input characters: ");
+
+    // read characters until end of file is reached
+    while ((c = getchar()) != EOF) {
+        if (c >= 'A' && c <= 'Z') {
+            uppercase++;
+        } else if (c >= 'a' && c <= 'z') {
+            lowercase++;
+        } else {
+            other++;
+        }
+    }
+
+    printf("Uppercase letters: %d\n", uppercase);
+    printf("Lowercase letters: %d\n", lowercase);
+    printf("Other characters: %d\n", other);
+
+    return 0;
+}
